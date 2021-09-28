@@ -52,11 +52,12 @@ int main()
 	choice = 0;
 
 	while (running) {
-		cout << "loop started\n\n" << endl;
 
 		display(choice);
-		cin >> choice;
-
+		if (choice == 0) {
+			cin >> choice;
+		}
+		
 		if (choice == 1) {
 			cout << "what is the student ID you want to search up?" << endl;
 			cin >> studentID;
@@ -81,7 +82,7 @@ int main()
 			cin >> choice;
 			if (choice == 2) {
 				choice = 0;
-			}
+			} 
 		}
 		else if (choice == 2) {
 			for (int rep = 0; rep < 10; rep++) 
@@ -94,6 +95,7 @@ int main()
 				cout << " Avg  : " << clas[rep].avg << endl;	
 				cout << endl;
 			}
+			choice = 0;
 		}
 		else {
 			running = false;
