@@ -2,52 +2,24 @@
 #include <fstream>
 using namespace std;
 
-const int 	MAX_LEN = 20;
-const int 	NUM_SCORES = 3;
-struct Students {
-	int 	sid;
-	char 	sname[MAX_LEN];
-	double 	scores[NUM_SCORES];
-};
+const int N = 10;
 
-Students *makeStudents(int );
-void printStudents(Students * const, int);
-void sortStudents(Students * const, int);
-
+void printArray (double const *ptr, size_t len);
 
 int main()
 {
-	const int N = 10;
-	Students *ptr;
+    double numbers[N] = {10.0, 15.2, 21.2, 10.5, 11.3, 12.5,
+    13.8, 14.7, 19.8, 20.0};
 
-	ptr = makeStudents(N);
-	printStudents(ptr, N);
-	sortStudents(ptr, N);
-
+   /* The address of the first element of the array is set
+    in my code as the initial value passed through the function,
+    the address of the array is also known as the first item of that array. 
+    That is since in memory, the addresses of the array follow the first value. */
+    printArray(numbers, N); 
 }
 
-Students *makeStudents(int N)
-{
-	ifstream ifs;
-    Students    *ptr= new Students [N];
-
-    ifs.open("students.txt");
-    if ( ifs.fail())
-    {
-        cerr << "File open error\n";
-        exit(0);
-    }
-
-	for(int i=0;i<N; i++)
-    {
-        ifs >> (ptr+i)->sid >> (ptr+i)->sname;
-        for(int j=0; j<NUM_SCORES; j++)
-			ifs >> (ptr+i)->scores[j] ;
-		if ( ifs.fail() )
-		{
-			cerr << "File Read Error\n";
-			exit(0);
-		}
-    }
-	return ptr;
-}
+void printArray(double const *ptr, size_t len)        
+{                    
+    for( int i = 0; i < len; ++i )      
+    cout << ptr[i] << endl;        
+}   
