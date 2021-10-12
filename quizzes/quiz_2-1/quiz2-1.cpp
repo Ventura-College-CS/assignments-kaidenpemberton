@@ -4,6 +4,7 @@ using namespace std;
 
 void printArray (int **ptr);
 void fillupArray (int **ptr);
+
 int main()
 {
     int *numbers[10];

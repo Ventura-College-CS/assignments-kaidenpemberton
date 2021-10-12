@@ -46,6 +46,7 @@ int main()
 		ofs.write( (char *)&clas[rep], sizeof(clas[rep]) );
 	}
 
+
 	cout << "Set up project complete" << endl;
 
 
