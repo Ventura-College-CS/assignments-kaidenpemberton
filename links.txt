@@ -6,6 +6,6 @@ Slide :
 Github sample : 
 	https://github.com/Kwooley/CS-V15 
 Repl.it: 
-	https://replit.com/join/zagjfedu-kwooler 
+	https://replit.com/@kwooler/VC-CS#Stack.hpp 
 Gather.town: 
 	https://gather.town/invite?token=XRrr4abrBpkvXF-FZCwuEnCDL-nwO2Cp 
