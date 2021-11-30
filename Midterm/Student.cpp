@@ -5,12 +5,12 @@ using namespace std;
 
 Student :: Student (int i, string name, double *sc) 
 {
-    this.SID = i;
-    this.SName = name;
-    this.scores = sc;
+    SID = i;
+    SName = name;
+    *scores = *sc;
 }
 
-int getID() { return this.SID;};
-string getName() { return this.SName};
-double getScores() {return *this.scores};
+int Student :: getID() { return SID;}
+string Student :: getName() { return SName;}
+double Student :: getScores() { return *scores;}
 
