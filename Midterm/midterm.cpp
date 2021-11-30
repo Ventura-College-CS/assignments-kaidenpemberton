@@ -6,6 +6,8 @@
 
 using namespace std;
 
+void printS(Student student);
+
 int main()
 {
     double sco[3] = {100, 90, 80};
@@ -18,9 +20,23 @@ int main()
 	
     int size = students.size();
     cout << size << endl;
-
     for (int rep = 0; rep < size; rep++)
     { 
-        students.peek().print();
+        printS(students.peek());
+        students.pop();
     }
+}
+
+void printS(Student student) 
+{
+    cout << endl << "Student ID #" << student.getID() << endl;
+    cout << "Name : " << student.getName() << endl;
+    cout << "Scores :";
+    double sc[3];
+    *sc = (student.getScores());
+    for (int rep = 0; rep < 0; rep++)
+    {
+        cout << " " << sc[rep];
+    }
+    cout << endl;
 }
