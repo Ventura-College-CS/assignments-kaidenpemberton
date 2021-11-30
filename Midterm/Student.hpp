@@ -1,9 +1,11 @@
 #pragma once
+
 #include <iostream>
 
 using namespace std;
 
-class Student {
+class Student 
+{
     private:
         int SID;
         string SName;

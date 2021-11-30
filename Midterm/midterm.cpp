@@ -15,5 +15,7 @@ int main()
     students.push(Student(3, "Kaiden", sco));
     students.push(Student(4, "Bruno", sco));
     students.push(Student(5, "Andy", sco));
-	cout << "start";
+	
+    int size = students.size();
+    cout << size;
 }
