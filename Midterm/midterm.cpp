@@ -17,5 +17,10 @@ int main()
     students.push(Student(5, "Andy", sco));
 	
     int size = students.size();
-    cout << size;
+    cout << size << endl;
+
+    for (int rep = 0; rep < size; rep++)
+    { 
+        students.peek().print();
+    }
 }

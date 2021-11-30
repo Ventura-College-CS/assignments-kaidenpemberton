@@ -11,14 +11,17 @@ class Stack
 private:
 	vector<T>  pool;
 public:
-	Stack()
-	{
-		//pool.reserve(capacity); 
-	}	
-	/*Stack(int size)
-	{
-		pool.reserve(size);
-	}*/
+	stack(int size)
+{
+    arr = new int[size];
+    capacity = size;
+    top = -1;
+}
+ 
+// Destructor to free memory allocated to the stack
+~stack() {
+    delete[] arr;
+}
 	T pop() 
 	{
 		T val = pool.back();
@@ -37,7 +40,15 @@ public:
 	{
 		return pool.size();
 	}
-
+	int peek()
+{
+    if (!isEmpty()) {
+        return arr[top];
+    }
+    else {
+        exit(EXIT_FAILURE);
+    }
+}
 
 };
 

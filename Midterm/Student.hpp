@@ -16,5 +16,5 @@ class Student
         int getID();
         string getName();
         double getScores();
-
+        void print();
 };
