@@ -13,12 +13,12 @@ private:
 public:
 	Stack()
 	{
-		pool.reserve(capacity); 
+		//pool.reserve(capacity); 
 	}	
-	Stack(int size)
+	/*Stack(int size)
 	{
 		pool.reserve(size);
-	}
+	}*/
 	T pop() 
 	{
 		T val = pool.back();
@@ -29,11 +29,11 @@ public:
 	{
 		pool.push_back(v); 
 	}
-	T isEmpty() const
+	bool isEmpty()
 	{
 		return pool.empty();
 	}
-	T size() 
+	int size() 
 	{
 		return pool.size();
 	}
