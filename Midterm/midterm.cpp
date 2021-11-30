@@ -19,12 +19,18 @@ int main()
     students.push(Student(5, "Andy", sco));
 	
     int size = students.size();
-    cout << size << endl;
-    for (int rep = 0; rep < size; rep++)
-    { 
-        printS(students.peek());
-        students.pop();
-    }
+    cout << size << endl;    
+    
+    printS(students.peek());
+    students.pop();
+    printS(students.peek());
+    students.pop();
+    printS(students.peek());
+    students.pop();
+    printS(students.peek());
+    students.pop();
+    printS(students.peek());
+    students.pop();
 }
 
 void printS(Student student) 
